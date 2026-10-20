@@ -1,0 +1,234 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital@0;1&family=Oswald:wght@200&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+  background-color: #0b1120;
+}
+
+:root {
+  --cyan: #3bb4a1;
+  --light-grey: #cbd5e1;
+  --grey: #0b1120;
+  --yellow: #fbf1a4;
+  --dark-cyan: #013e38;
+  --red: #f56664;
+
+  --basefont: "Oswald", sans-serif;
+  --secfont: "Montserrat", sans-serif;
+
+  /* Profile colors */
+  --profile-bg: #0b1120;
+  --profile-card: #1e293b;
+  --profile-card-dark: #0f172a;
+  --profile-border: #334155;
+  --profile-white: #f8fafc;
+  --profile-text: #e2e8f0;
+  --profile-muted: #cbd5e1;
+}
+
+body {
+  font-family: var(--basefont);
+  background-color: var(--profile-bg);
+  color: var(--profile-white);
+  text-align: center;
+}
+
+/* =========================================================
+   GLOBAL TEXT VISIBILITY
+   ========================================================= */
+
+body,
+p,
+span,
+div,
+label,
+small,
+strong,
+li,
+td,
+th {
+  color: inherit;
+}
+
+/* Bootstrap muted colors are too dark for your UI */
+.text-muted {
+  color: #cbd5e1 !important;
+}
+
+.text-secondary {
+  color: #cbd5e1 !important;
+}
+
+.text-body-secondary {
+  color: #cbd5e1 !important;
+}
+
+.text-dark {
+  color: #0f172a !important;
+}
+
+/* =========================================================
+   HEADINGS
+   ========================================================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #f8fafc;
+}
+
+h2 {
+  color: #f8fafc !important;
+}
+
+/* =========================================================
+   LABELS
+   ========================================================= */
+
+label,
+.form-label {
+  color: #f8fafc !important;
+  font-weight: 500;
+}
+
+.form-text {
+  color: #cbd5e1 !important;
+}
+
+/* =========================================================
+   INPUTS
+   ========================================================= */
+
+input,
+textarea,
+select {
+  color: #f8fafc !important;
+  background-color: #0f172a !important;
+  border-color: #475569 !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #94a3b8 !important;
+  opacity: 1 !important;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  color: #f8fafc !important;
+  background-color: #0f172a !important;
+  border-color: #3bb4a1 !important;
+  box-shadow: 0 0 0 0.2rem rgba(59, 180, 161, 0.2) !important;
+}
+
+select option {
+  background-color: #0f172a;
+  color: #f8fafc;
+}
+
+/* =========================================================
+   LINKS
+   ========================================================= */
+
+a {
+  color: #3bb4a1;
+}
+
+a:hover {
+  color: #7dd3c7;
+}
+
+/* =========================================================
+   PROFILE CARDS
+   ========================================================= */
+
+.profile-card {
+  background-color: #1e293b;
+  color: #f8fafc;
+  border: 1px solid #334155;
+}
+
+/* =========================================================
+   OLD BOX STYLES
+   ========================================================= */
+
+.box {
+  background-color: #1e293b;
+  color: #f8fafc;
+  padding: 10px;
+  margin-bottom: 2rem;
+  border-radius: 5px;
+  box-shadow: 3px 3px 5px #080d1a;
+  width: 100%;
+  border: 1px solid #334155;
+}
+
+.desc {
+  margin: 0.6rem;
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  color: #e2e8f0;
+}
+
+.details {
+  margin: 0.6rem;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  font-size: 1rem !important;
+  color: #cbd5e1 !important;
+}
+
+.boxskill-boxes {
+  margin: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.skill-box {
+  text-align: center;
+  background-color: #013e38;
+  color: #f8fafc !important;
+  margin-right: 1rem;
+  border-radius: 5px;
+  min-width: 4rem;
+  font-size: 12px;
+  padding: 5px 10px;
+}
+
+/* =========================================================
+   SCROLLBAR
+   ========================================================= */
+
+::-webkit-scrollbar-track {
+  border: 5px solid #00211e;
+  background-color: #00211e;
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+  background-color: #00211e;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--cyan);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar:horizontal {
+  height: 0;
+  width: 0;
+  display: none;
+}
