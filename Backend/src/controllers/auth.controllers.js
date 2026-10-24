@@ -244,14 +244,12 @@ export const register = asyncHandler(async (req, res) => {
   // ==========================================
 
   const cookieOptions = {
-    httpOnly: true,
-    secure: process.env.NODE_ENV === "production",
-    sameSite:
-      process.env.NODE_ENV === "production"
-        ? "none"
-        : "lax",
-    maxAge: 7 * 24 * 60 * 60 * 1000,
-  };
+  httpOnly: true,
+  secure: true,
+  sameSite: "none",
+  path: "/",
+  maxAge: 7 * 24 * 60 * 60 * 1000,
+};
 
   // ==========================================
   // SET COOKIE
@@ -322,14 +320,12 @@ export const login = asyncHandler(async (req, res) => {
   const token = generateJWTToken(loggedInUser);
 
   const cookieOptions = {
-    httpOnly: true,
-    secure: process.env.NODE_ENV === "production",
-    sameSite:
-      process.env.NODE_ENV === "production"
-        ? "none"
-        : "lax",
-    maxAge: 7 * 24 * 60 * 60 * 1000,
-  };
+  httpOnly: true,
+  secure: true,
+  sameSite: "none",
+  path: "/",
+  maxAge: 7 * 24 * 60 * 60 * 1000,
+};
 
   res.cookie(
     "accessToken",
@@ -352,11 +348,9 @@ export const login = asyncHandler(async (req, res) => {
 export const handleLogout = asyncHandler(async (req, res) => {
   const cookieOptions = {
     httpOnly: true,
-    secure: process.env.NODE_ENV === "production",
-    sameSite:
-      process.env.NODE_ENV === "production"
-        ? "none"
-        : "lax",
+    secure: true,
+    sameSite: "none",
+    path: "/",
   };
 
   res.clearCookie(
